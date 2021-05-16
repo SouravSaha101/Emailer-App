@@ -6,13 +6,13 @@ class Admin extends React.Component {
   constructor() {
     super();
     this.state = {
-      subjet: "",
+      subject: "",
       text: "",
       html: "",
     };
   }
   onChangeSubject = (e) => {
-    this.setState({ subjet: e.target.value });
+    this.setState({ subject: e.target.value });
   };
   onChangeText = (e) => {
     this.setState({ text: e.target.value });
@@ -22,8 +22,8 @@ class Admin extends React.Component {
   };
 
   enableContinue = () => {
-    let { subjet } = this.state;
-    if (subjet.length > 0) return false;
+    let { subject } = this.state;
+    if (subject.length > 0) return false;
     else {
       return true;
     }
@@ -42,11 +42,11 @@ class Admin extends React.Component {
       if (response.status === 200) {
         let res = await response.json();
         alert(`SUCESS!!! ${res.message}`);
-        this.setState({ subjet: "", text: "", html: "" });
+        this.setState({ subject: "", text: "", html: "" });
       } else {
         let res = await response.json();
         alert(`ERROR!!! ${res.message}`);
-        this.setState({ subjet: "", text: "", html: "" });
+        this.setState({ subject: "", text: "", html: "" });
       }
     };
     return (
