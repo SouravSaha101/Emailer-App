@@ -27,6 +27,9 @@ app.use(
     keys: [keys.cookieKey],
   })
 );
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
+});
 require("./routes/saveEmail")(app);
 require("./routes/sendEmail")(app);
 require("./routes/login")(app);
