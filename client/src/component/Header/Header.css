@@ -1,0 +1,11 @@
+.organizer-main-logo {
+  display: block;
+  text-align: center;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}

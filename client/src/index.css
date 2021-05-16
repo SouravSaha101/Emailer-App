@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #8360c3; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #2ebf91,
+    #8360c3
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #2ebf91,
+    #8360c3
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.inner-section {
+  width: 100%;
+  padding: 0px;
+}
+.section-wrapper {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.account-form {
+  background-color: #ffffff;
+  border-radius: 3px;
+  padding: 25px 40px;
+  box-shadow: rgb(0 0 0 / 10%) 0 0 10px;
+}
+.inner-section h1 {
+  text-align: center;
+  color: #5e6c84;
+  font-size: 16px;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+.inner-section .form-field {
+  font-size: 14px;
+  background-color: #fafbfc;
+  border: 2px solid #dfe1e6;
+  border-radius: 3px;
+  height: 44px;
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 1.2em;
+}
+
+.button {
+  border-radius: 0.3em;
+  color: hsl(0, 0%, 30%);
+  display: inline-block;
+  font-weight: bold;
+  margin-bottom: 0.8em;
+  padding: 0.6em 1.3em;
+  position: relative;
+  text-decoration: none;
+  border: 0px;
+  width: 100%;
+  background: #61bd4f;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(#61bd4f),
+    to(#5aac44)
+  );
+  background: linear-gradient(to bottom, #61bd4f 0%, #5aac44 100%);
+  box-shadow: 0 2px 0 #3f6f21;
+  color: #fff;
+  margin-top: 1rem;
+}
+.button[disabled] {
+  background: #e2e4e6;
+  box-shadow: none;
+  color: hsl(0, 0%, 55%);
+  cursor: not-allowed;
+}

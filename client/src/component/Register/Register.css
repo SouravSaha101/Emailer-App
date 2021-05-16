@@ -1,0 +1,22 @@
+.PhoneInputInput {
+  border: 0;
+}
+.register-button {
+  width: 50%;
+}
+.reset-align {
+  display: inline-block;
+  text-align: center;
+  width: 50%;
+}
+.reset-button {
+  font-weight: bold;
+  color: grey;
+  text-decoration: none;
+}
+a:hover {
+  color: grey !important;
+  font-weight: bolder !important;
+  text-decoration: underline;
+  cursor: pointer;
+}

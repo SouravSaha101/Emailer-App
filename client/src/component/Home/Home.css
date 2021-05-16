@@ -1,0 +1,51 @@
+.account-form .login-method-separator {
+  text-align: center;
+  font-size: 12px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.account-form .oauth-button {
+  background: #fff;
+  color: rgba(0, 0, 0, 0.54);
+  box-shadow: rgb(0 0 0 / 20%) 1px 1px 5px 0;
+  border-color: transparent;
+  text-align: center;
+  border-radius: 3px;
+  width: 99%;
+  height: 39px;
+  padding-top: 0;
+  margin-bottom: 12px;
+}
+.google-button {
+  display: inline-block;
+  background: #4285f4;
+  color: #fff;
+  width: auto;
+  border-radius: 2px;
+  border: 1px solid #4285f4;
+  box-shadow: 0 2px 2px #c4c9cc;
+  white-space: nowrap;
+  margin-bottom: 1.2em;
+}
+.account-form .oauth-button span.icon {
+  display: inline-block;
+  border-radius: 1px;
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.oauth-button span.label {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #505f79;
+  padding: 3px;
+  height: 32px;
+  line-height: 32px;
+}
+.google-button span.label {
+  margin: 0;
+}
