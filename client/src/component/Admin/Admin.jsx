@@ -1,6 +1,7 @@
 import React from "react";
 import "./Admin.css";
 import Header from "../Header/Header";
+import { Redirect, withRouter } from "react-router-dom";
 
 class Admin extends React.Component {
   constructor() {
@@ -51,8 +52,15 @@ class Admin extends React.Component {
     };
     const onClickBack = (e) => {
       e.preventDefault();
+      localStorage.setItem("isAdmin", false);
       this.props.history.push("/");
     };
+
+    let isAdmin = localStorage.getItem("isAdmin");
+
+    if (isAdmin == "false") {
+      return <Redirect to="/" />;
+    }
     return (
       <div id="admin">
         <Header name={"Hello Admin"} />
@@ -111,4 +119,4 @@ class Admin extends React.Component {
     );
   }
 }
-export default Admin;
+export default withRouter(Admin);

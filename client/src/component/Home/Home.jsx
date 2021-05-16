@@ -38,6 +38,7 @@ class Credential extends React.Component {
       });
       if (response.status === 200) {
         let res = await response.json();
+        localStorage.setItem("isAdmin", true);
         alert(`SUCESS!!! ${res.message}`);
         this.props.history.push("/admin");
       } else {

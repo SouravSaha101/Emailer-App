@@ -4,10 +4,8 @@ const Admin = mongoose.model("admin");
 module.exports = (app) => {
   app.post("/api/login", async (req, res) => {
     try {
-      if (
-        req.body.email == "souravsaha101@gmail.com" &&
-        req.body.password == "1234"
-      ) {
+      let user = await Admin.findOne({ email: req.body.email });
+      if (user && user.password === req.body.password) {
         res.status(200).json({ message: "Login Successful" });
       } else {
         res.status(401).json({ message: "Check the credentials" });
