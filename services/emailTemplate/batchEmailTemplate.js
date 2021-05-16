@@ -188,7 +188,7 @@ module.exports = (prop) => {
         <td style="padding:40px 20px 10px 40px; line-height:28px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="color: #c64f4f; font-size: 28px; font-family: inherit">Thank you for being a wonderful client. I hope your holidays are filled with countless blessings.</span></div><div></div></div></td>
       </tr>
     <tr>
-        <td style="padding:40px 20px 10px 40px; line-height:28px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="color: #c64f4f; font-size: 28px; font-family: inherit">${prop.html}.</span></div><div></div></div></td>
+        <td style="padding:40px 20px 10px 40px; line-height:28px; text-align:inherit; background-color:#ffffff;" height="100%" valign="top" bgcolor="#ffffff" role="module-content"><div><div style="font-family: inherit; text-align: inherit"><span style="color: #c64f4f; font-size: 28px; font-family: inherit">${prop.html}</span></div><div></div></div></td>
     </tr>
     </tbody>
   </table><table class="module" role="module" data-type="text" border="0" cellpadding="0" cellspacing="0" width="100%" style="table-layout: fixed;" data-muid="cb56948d-1f08-4be0-8178-b17cd448e133.1.1.1" data-mc-module-version="2019-10-22">
