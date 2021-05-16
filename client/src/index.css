@@ -88,3 +88,7 @@ code {
   color: hsl(0, 0%, 55%);
   cursor: not-allowed;
 }
+.back-button {
+  width: 18%;
+  background: #b25ce7;
+}

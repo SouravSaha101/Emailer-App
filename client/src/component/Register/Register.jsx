@@ -3,6 +3,7 @@ import "./Register.css";
 import Header from "../Header/Header";
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
+import { withRouter } from "react-router-dom";
 
 class Register extends React.Component {
   constructor() {
@@ -72,6 +73,10 @@ class Register extends React.Component {
     this.setState({ name: "", email: "", phone: "" });
   };
   render() {
+    const onClickBack = (e) => {
+      e.preventDefault();
+      this.props.history.push("/");
+    };
     return (
       <div id="Register">
         <Header name={"Register to recieve emails with us"} />
@@ -120,6 +125,15 @@ class Register extends React.Component {
                   </div>
                 </form>
                 <hr></hr>
+                <button
+                  id="signup-submit"
+                  type="button"
+                  className="button back-button"
+                  value="Back"
+                  onClick={onClickBack}
+                >
+                  <i className="fa fa-home"></i>
+                </button>
               </div>
             </div>
           </div>
@@ -128,4 +142,4 @@ class Register extends React.Component {
     );
   }
 }
-export default Register;
+export default withRouter(Register);

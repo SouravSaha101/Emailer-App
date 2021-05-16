@@ -49,6 +49,10 @@ class Admin extends React.Component {
         this.setState({ subject: "", text: "", html: "" });
       }
     };
+    const onClickBack = (e) => {
+      e.preventDefault();
+      this.props.history.push("/");
+    };
     return (
       <div id="admin">
         <Header name={"Hello Admin"} />
@@ -83,7 +87,6 @@ class Admin extends React.Component {
                     onChange={this.onChangeHtml}
                   />
                   <input
-                    id="signup-submit"
                     type="submit"
                     className="button"
                     value="Continue"
@@ -92,6 +95,14 @@ class Admin extends React.Component {
                   ></input>
                 </form>
                 <hr></hr>
+                <button
+                  type="button"
+                  className="button back-button"
+                  value="Logout"
+                  onClick={onClickBack}
+                >
+                  <i className="fa fa-sign-out"></i>
+                </button>
               </div>
             </div>
           </div>

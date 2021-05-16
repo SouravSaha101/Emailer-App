@@ -31,6 +31,7 @@ require("./routes/saveEmail")(app);
 require("./routes/sendEmail")(app);
 require("./routes/login")(app);
 require("./routes/batchEmail")(app);
+require("./routes/logout")(app);
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));

@@ -85,8 +85,8 @@ class Credential extends React.Component {
                 <form>
                   <div className="login-method-separator">OR</div>
                   <div
-                    id="google"
-                    className="google-button oauth-button"
+                    id="push"
+                    className="push-button oauth-button"
                     onClick={() => {
                       this.props.history.push("/register");
                     }}

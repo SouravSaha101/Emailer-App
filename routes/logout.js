@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Admin = mongoose.model("admin");
 
 module.exports = (app) => {
-  app.post("/api/login", async (req, res) => {
+  app.get("/api/logout", async (req, res) => {
     try {
       if (
         req.body.email == "souravsaha101@gmail.com" &&
