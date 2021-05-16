@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const User = mongoose.model("users");
 
 const keys = require("../config/keys");
+const batchEmailTemplate = require("../services/emailTemplate/batchEmailTemplate");
 sgMail.setApiKey(keys.sendGridKey);
 
 module.exports = (app) => {
@@ -16,13 +17,18 @@ module.exports = (app) => {
       if (!users) {
         return res.status(200).json({ message: "No one has registered" });
       } else {
-        let { subject, text, html } = req.body;
+        let { subject, text, name, html } = req.body;
+        let prop = {
+          subject: subject,
+          name: name ? name : "",
+          html: html ? html : "",
+        };
         const msg = {
           to: emailList,
           from: keys.sendGridEmail,
           subject: subject.toString(),
-          text: text.toString(),
-          html: `<p>${html.toString()}</p>`,
+          text: text ? text.toString() : " ",
+          html: batchEmailTemplate(prop),
         };
         sgMail
           .sendMultiple(msg)

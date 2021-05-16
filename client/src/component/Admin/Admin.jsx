@@ -32,7 +32,12 @@ class Admin extends React.Component {
   render() {
     const onClickContinue = async (e) => {
       e.preventDefault();
-      let data = this.state;
+      let data = {
+        name: isAdmin,
+        html: this.state.html,
+        subject: this.state.subject,
+        text: this.state.text,
+      };
       const response = await fetch("/api/batch-email", {
         method: "POST",
         headers: {
@@ -52,13 +57,13 @@ class Admin extends React.Component {
     };
     const onClickBack = (e) => {
       e.preventDefault();
-      localStorage.setItem("isAdmin", false);
+      localStorage.setItem("isAdmin", "");
       this.props.history.push("/");
     };
 
     let isAdmin = localStorage.getItem("isAdmin");
 
-    if (isAdmin == "false") {
+    if (isAdmin == "") {
       return <Redirect to="/" />;
     }
     return (
